@@ -3,7 +3,7 @@ pipeline {
 
 environment {
 
-        AWS_DOCKER_REGISTRY = '701518155081.dkr.ecr.eu-north-1.amazonaws.com/imagefinalproject_ec'
+        AWS_DOCKER_REGISTRY = '701518155081.dkr.ecr.eu-north-1.amazonaws.com'
         // your ECR repository name
         APP_NAME = 'imagefinalproject_ec'
         AWS_DEFAULT_REGION = 'eu-north-1'
@@ -63,6 +63,5 @@ environment {
                 }
             }
         }
-   
     }
 }
