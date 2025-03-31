@@ -1,0 +1,27 @@
+{
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "family": "Group-Project-CE-Prod",
+    "containerDefinitions": [
+        {
+            "name": "GroupApp",
+            "image": "701518155081.dkr.ecr.eu-north-1.amazonaws.com/imagefinalproject_ec:latest",
+            "portMappings": [
+                {
+                    "name": "ngnix-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true
+        }
+    ],
+    "volumes": [],
+    "networkMode": "awsvpc",
+    "memory": "512",
+    "cpu": "256",
+    "executionRoleArn": "arn:aws:iam::701518155081:role/ecsTaskExecutionRole"
+}
